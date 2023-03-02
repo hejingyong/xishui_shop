@@ -1,0 +1,38 @@
+spring:
+  mail:
+    host: smtp.163.com #发送邮件服务器
+    username: 18723025086@163.com #发送邮件的邮箱地址
+    password: EUQMEWKQLODYIDNC #客户端授权码，不是邮箱密码,网易的是自己设置的
+
+    properties.mail.smtp.port: 994 #465或者994
+    from: 18723025086@163.com # 发送邮件的地址，和上面username一致
+    nickname: 溪水商城
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true
+    properties.mail.smtp.ssl.enable: true
+    default-encoding: utf-8
+
+sms:
+  aliyun:
+    accessKeyID: LTAI4GDr1DAsYncMPsk9Db59 # accessKeyID
+    accessKeySecret: Qrxv4BgkI6sAYNpG7rX5IHWVc5mKoG # accessKeySecret
+    domain: dysmsapi.aliyuncs.com # 固定不变
+    regionId: cn-hangzhou # 固定不变
+    templateCode: SMS_205882311 # 你的模板code
+    signName: 溪水商城 # 你的签名
+
+oss:
+  bucketName: "spring-oss"
+  accessKeyId: "LTAI4GDr1DAsYncMPsk9Db59"
+  accessKeySecret: "kMI1APv92ArPoX6KYz4sKtgiyjn6Kt"
+  #OSS对应的区域
+  endpoint: "http://oss-cn-beijing.aliyuncs.com"
+  bucket: "https://spring-oss.oss-cn-beijing.aliyuncs.com"
+  fileHost: "images"
+
+
+minio:
+    endpoint: http://127.0.0.1:9000    #安装minio的服务器ip
+    bucketName: local               #创建的存储桶名称（可界面创建，亦可sdk代码创建）
+    accessKey: minioadmin            #minio登录账号
+    secretKey: minioadmin      #minio登录密码
